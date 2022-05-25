@@ -1,0 +1,186 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.container {
+    display: flex;
+    background-color: #d4c6c6;
+    justify-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin: 5%;
+    padding: 5px;
+    width: auto;
+    height: auto;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -7px 0px 0px inset;
+}
+
+.container button {
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #234E70;
+    color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -5px 0px 0px inset;
+}
+
+.container button:hover {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+}
+
+.container div {
+    padding: 5px;
+    margin: 5px;
+}
+
+
+.input {
+    font-family: 'Barlow Condensed', sans-serif;
+    margin: 5px;
+    font-size: 2rem;
+    width: 320px;
+    height: 40px;
+    border: transparent;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: #234E70;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px 0px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px 0px inset;
+    text-align: right;
+}
+
+.inputContainer {
+    display: flex;
+    justify-content: center;
+    width: auto;
+}
+
+.rowOne {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.rowOne button {
+    color: #234E70;
+    background-color: #E2DED0;
+}
+
+.rowTwo {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.rowThree {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.rowFour {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.rowFive {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    width: auto;
+    height: auto;
+}
+
+.rowTwo #subtract {
+    background-color: #E2DED0;
+    color: #234E70;
+}
+
+.rowThree #add {
+    background-color: #E2DED0;
+    color: #234E70;
+}
+
+.rowFour #assign {
+    background-color: #B1D8B7;
+    color: #234E70;
+}
+
+.rowFive #point {
+    background-color: #E2DED0;
+    color: #234E70;
+}
+
+
+footer {
+    display: flex;
+    justify-content:center;
+    align-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    padding: 5px;
+    color: #234E70;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+footer a {
+    text-decoration: none;
+    color: #E57F84;
+    cursor: pointer;
+    padding: 0 0 0 4px;
+    font-size: 1em;
+}
+
+footer a:hover {
+    color: #234E70;
+}
+
+
+@media screen and (max-width: 400px) {
+    .container {
+        width: auto;
+        height: auto;
+    }
+
+    .container button {
+        font-size: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .container div {
+        font-size: 1.5rem;
+    }
+
+    .input {
+        font-size: 1.5rem;
+        width: 200px;
+        height: 40px;
+    }
+}
