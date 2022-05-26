@@ -15,10 +15,7 @@ let subtract_op = document.querySelector('#subtract');
 let x = '';
 let y = '';
 let op = '';
-let op_2 = '';
 let result = '';
-
-
 
 numbers.forEach(number => {
     number.addEventListener("click", (e) => {
@@ -33,7 +30,7 @@ numbers.forEach(number => {
         };
 
         if (x[0] === '.') {
-            display.value = display.value.slice(1);
+            display.value = display.value.slice(0, -1);
             x = x.slice(0, -1);
             point.disabled = true;
         } else {
@@ -46,6 +43,12 @@ numbers.forEach(number => {
             point.disabled = true;
         } else {
             point.disabled = false;
+        }
+
+        if (result) {
+            y = '';
+            op = '';
+            result = '';
         }
     });
 });
@@ -69,7 +72,17 @@ operators.forEach(operator => { // Check if operator is clicked
             multiply_op.disabled = true;
             add_op.disabled = true;
             subtract_op.disabled = true;
+        }else {
+            divide_op.disabled = false;
+            multiply_op.disabled = false;
+            add_op.disabled = false;
+            subtract_op.disabled = false;
         };
+
+        if (result) {
+            y = '';
+            result = '';
+        }
     });
 });
 
@@ -114,6 +127,12 @@ backspace.addEventListener('click', () => { // Delete the last character
         add_op.disabled = false;
         subtract_op.disabled = false;
     };
+
+    if (x === 0 && result === 0) {
+        display.value = display.value.slice(0, -1);
+        x = '';
+        result = '';
+    }
 });
 
 function add(a, b) {
@@ -150,16 +169,25 @@ assign.addEventListener('click', (a, b) => {
         display.value = result;
     };
 
-    if (result) {
-        x = display.value;
-        result = '';
+    if (result || result === 0) {
+        x = result;
         y = '';
         op = '';
         divide_op.disabled = false;
         multiply_op.disabled = false;
         add_op.disabled = false;
         subtract_op.disabled = false;
-        console.log(x);
-        console.log(result);
-    }
+
+    }else if (display.value === 'NaN'){
+        alert("Invalid Input");
+        display.value = '';
+        x = '';
+        y = '';
+        op = '';
+        result = '';
+        divide_op.disabled = false;
+        multiply_op.disabled = false;
+        add_op.disabled = false;
+        subtract_op.disabled = false;
+    }   
 });
